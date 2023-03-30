@@ -1,0 +1,164 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 12.5rem;
+
+  background-color: var(--gray-700);
+}
+
+.header > img {
+  margin-bottom: 1.6875rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: calc(100vh - 12.5rem);
+}
+
+.wrapper > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  height: 3.375rem;
+
+  margin-top: -1.6875rem;
+}
+
+.wrapper > form > input {
+  width: 39.875rem;
+  height: 3.375rem;
+
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+
+  padding: 1rem;
+
+  background-color: var(--gray-500);
+}
+
+.wrapper > form > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  width: 5.625rem;
+  height: 3.25rem;
+
+  border-radius: 8px;
+
+  color: var(--gray-100);
+  font-size: 0.875rem;
+
+  background-color: var(--blue-500);
+}
+
+.wrapper > form > button > img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.taskWrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 46rem;
+  height: 80%;
+
+  margin: auto;
+  margin-top: 5.6875rem;
+
+}
+
+.taskInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 1.1875rem;
+}
+
+.taskInfo > div{
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.taskInfo > div:nth-child(1) > span:nth-child(1) { 
+  color: var(--blue-300);
+  font-size: 0.875rem;
+  font-weight: 700;
+ 
+}
+
+.taskInfo > div:nth-child(2) > span:nth-child(1) { 
+  color: var(--purple-300);
+  font-size: 0.875rem;
+  font-weight: 700;
+ 
+}
+
+.taskInfo > div:nth-child(1) > span:nth-child(2),
+.taskInfo > div:nth-child(2) > span:nth-child(2) {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5625rem;
+  height: 1.1875rem;
+
+  background-color: var(--gray-400);
+  border-radius: 999px;
+
+  padding: 0.125rem 0.5rem;
+
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  font-weight: 700;
+ 
+}
+
+.taskEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  width: 100%;
+  height: 15.25rem;
+
+  margin-top: 1.5rem;
+
+  border-top: 1px solid var(--gray-400);
+}
+
+.taskEmpty > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.taskEmpty p {
+  color: var(--gray-300);
+  line-height: 1.375rem;
+
+  text-align: center;
+
+  width:  43rem;
+}
