@@ -9,8 +9,8 @@ import { TaskType } from "./components/tasks/TasksList/TaskDetail";
 
 function App() {
   const [tasks, setTasks] = useState<TaskType[]>([]);
-
   const [task, setTask] = useState("");
+  const [totalTasksConcluded, setTotalTasksConcluded] = useState(0);
 
   function handleInputTaskChange(event: ChangeEvent<HTMLInputElement>) {
     event.target.setCustomValidity("");
@@ -43,7 +43,6 @@ function App() {
 
       return task;
     });
-
     setTasks(newTasks);
   }
 
@@ -74,6 +73,7 @@ function App() {
         </form>
         <Tasks
           tasks={tasks}
+          totalTasksConcluded={totalTasksConcluded}
           onCompleteTask={completeTask}
           onDeleteTask={deleteTask}
         />
