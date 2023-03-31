@@ -1,5 +1,3 @@
-import { TaskEmpty } from "./components/tasks/TaskEmpty";
-
 import Logo from "./assets/logo.svg";
 import Plus from "./assets/plus.svg";
 

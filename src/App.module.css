@@ -45,6 +45,12 @@
   background-color: var(--gray-500);
 }
 
+.wrapper > form > input:focus {
+  outline: transparent;
+  border: 1px solid var(--purple-500);
+  color: var(--gray-100);
+}
+
 .wrapper > form > button {
   display: flex;
   align-items: center;
@@ -61,6 +67,11 @@
   font-size: 0.875rem;
 
   background-color: var(--blue-500);
+}
+
+.wrapper > form > button:hover {
+  background-color: var(--blue-300);
+  cursor: pointer;
 }
 
 .wrapper > form > button > img {
