@@ -1,10 +1,16 @@
 import styles from "./styles.module.css";
-import { TaskDetail } from "./TaskDetail";
+import { TaskDetail, TaskType } from "./TaskDetail";
 
-export function TasksList() {
+interface TasksProps {
+  tasks: TaskType[];
+}
+
+export function TasksList({ tasks }: TasksProps) {
   return (
     <div className={styles.wrapper}>
-      <TaskDetail />
+      {tasks?.map((task) => (
+        <TaskDetail key={task.id} task={task} />
+      ))}
     </div>
   );
 }

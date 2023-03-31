@@ -2,22 +2,27 @@ import Trash from "../../../../assets/trash.svg";
 import Check from "../../../../assets/check.svg";
 import styles from "./styles.module.css";
 
-export function TaskDetail() {
-  const isDone = false;
+export interface TaskType {
+  id: number;
+  content: string;
+  concluded: boolean;
+}
 
+interface TaskProps {
+  task: TaskType;
+}
+
+export function TaskDetail({ task }: TaskProps) {
   return (
     <div className={styles.task}>
-      {isDone ? (
+      {task.concluded ? (
         <button className={styles.checked}>
           <img src={Check} alt="icone de checked" />
         </button>
       ) : (
         <button className={styles.check}></button>
       )}
-      <p className={isDone ? styles.done : ""}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer.
-      </p>
+      <p className={task.concluded ? styles.done : ""}>{task.content}</p>
       <button className={styles.trash}>
         <img src={Trash} alt="icone de deleção" />
       </button>

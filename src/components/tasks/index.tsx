@@ -2,8 +2,13 @@ import { TaskEmpty } from "./TaskEmpty";
 import { TasksList } from "./TasksList";
 
 import styles from "./styles.module.css";
+import { TaskType } from "./TasksList/TaskDetail";
 
-export function Tasks() {
+export interface TasksProps {
+  tasks: TaskType[] | null;
+}
+
+export function Tasks({ tasks }: TasksProps) {
   return (
     <div className={styles.taskWrapper}>
       <div className={styles.taskInfo}>
@@ -16,7 +21,7 @@ export function Tasks() {
           <span>0</span>
         </div>
       </div>
-      <TasksList />
+      {tasks?.length ? <TasksList tasks={tasks} /> : <TaskEmpty />}
     </div>
   );
 }
