@@ -33,12 +33,37 @@
   cursor: pointer;
 }
 
+.checked{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background-color: var(--purple-500);
+  border: none;
+  border-radius: 999999px;
+
+}
+
+.checked:hover {
+  background-color: var(--purple-300);
+  cursor: pointer;
+}
+
 .task > p {
   width: 39.5rem;
   max-width: 39.5rem;
 
   font-size: 0.875rem;
   line-height: 1.25rem;
+
+  color: var(--gray-100);
+}
+
+.done{
+  text-decoration-line: line-through;
+  color: var(--gray-300);
 }
 
 .trash {
