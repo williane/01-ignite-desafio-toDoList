@@ -1,4 +1,5 @@
 import { TaskEmpty } from "./TaskEmpty";
+import { TasksList } from "./TasksList";
 
 import styles from "./styles.module.css";
 
@@ -15,7 +16,7 @@ export function Tasks() {
           <span>0</span>
         </div>
       </div>
-      <TaskEmpty />
+      <TasksList />
     </div>
   );
 }
