@@ -1,4 +1,4 @@
-<img src=".github/Logo.png" alt="Logo site" />
+<img align="center" src=".github/Logo.png" alt="Logo site" />
 
 <h2 align="center">
    Ignite Todo List | <img alt="badge rocketseat" align="center" src=".github/rocket.svg">
@@ -63,12 +63,12 @@ npm run dev
 
 ## 🔖 Layout
 
-You can see the layout of this project throught [this link](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List). It is necessary have a Figma account [Figma](https://figma.com) to access.
+You can see the layout of this project throught [this link](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List). It is necessary have a [Figma](https://figma.com) account to access.
 
 <img src=".github/todo-list-figma.png" />
 
 ## 📝 License
 
-<p align="center">
+<p>
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>.
+</p>
