@@ -29,7 +29,7 @@ This project was created during the challenge on ReactJS path. On this challenge
 - [x] Remove a task
 - [x] Show the progress of task completion
 
-## 🧭 Como rodar o projeto
+## 🧭 Quick start
 
 **Clone this repository**
 
