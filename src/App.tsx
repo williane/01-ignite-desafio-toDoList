@@ -35,6 +35,18 @@ function App() {
     setTask("");
   }
 
+  function completeTask(id: number) {
+    const newTasks = tasks.map((task) => {
+      if (task.id === id) {
+        task.concluded = !task.concluded;
+      }
+
+      return task;
+    });
+
+    setTasks(newTasks);
+  }
+
   return (
     <>
       <nav className={styles.header}>
@@ -55,7 +67,7 @@ function App() {
             <img src={Plus} alt="icone com o sinal de mais" />
           </button>
         </form>
-        <Tasks tasks={tasks} />
+        <Tasks tasks={tasks} onCompleteTask={completeTask} />
       </main>
     </>
   );

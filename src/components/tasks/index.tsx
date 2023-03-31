@@ -4,11 +4,12 @@ import { TasksList } from "./TasksList";
 import styles from "./styles.module.css";
 import { TaskType } from "./TasksList/TaskDetail";
 
-export interface TasksProps {
+interface TasksProps {
   tasks: TaskType[] | null;
+  onCompleteTask: (id: number) => void;
 }
 
-export function Tasks({ tasks }: TasksProps) {
+export function Tasks({ tasks, onCompleteTask }: TasksProps) {
   return (
     <div className={styles.taskWrapper}>
       <div className={styles.taskInfo}>
@@ -21,7 +22,11 @@ export function Tasks({ tasks }: TasksProps) {
           <span>0</span>
         </div>
       </div>
-      {tasks?.length ? <TasksList tasks={tasks} /> : <TaskEmpty />}
+      {tasks?.length ? (
+        <TasksList tasks={tasks} onCompleteTask={onCompleteTask} />
+      ) : (
+        <TaskEmpty />
+      )}
     </div>
   );
 }
