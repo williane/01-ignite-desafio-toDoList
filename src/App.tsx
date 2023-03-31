@@ -47,6 +47,11 @@ function App() {
     setTasks(newTasks);
   }
 
+  function deleteTask(id: number) {
+    const newTasks = tasks.filter((task) => task.id !== id);
+    setTasks(newTasks);
+  }
+
   return (
     <>
       <nav className={styles.header}>
@@ -67,7 +72,11 @@ function App() {
             <img src={Plus} alt="icone com o sinal de mais" />
           </button>
         </form>
-        <Tasks tasks={tasks} onCompleteTask={completeTask} />
+        <Tasks
+          tasks={tasks}
+          onCompleteTask={completeTask}
+          onDeleteTask={deleteTask}
+        />
       </main>
     </>
   );

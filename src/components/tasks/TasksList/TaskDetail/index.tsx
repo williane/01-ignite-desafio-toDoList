@@ -11,9 +11,10 @@ export interface TaskType {
 interface TaskProps {
   task: TaskType;
   onCompleteTask: (id: number) => void;
+  onDeleteTask: (id: number) => void;
 }
 
-export function TaskDetail({ task, onCompleteTask }: TaskProps) {
+export function TaskDetail({ task, onCompleteTask, onDeleteTask }: TaskProps) {
   return (
     <div className={styles.task}>
       {task.concluded ? (
@@ -30,7 +31,7 @@ export function TaskDetail({ task, onCompleteTask }: TaskProps) {
         ></button>
       )}
       <p className={task.concluded ? styles.done : ""}>{task.content}</p>
-      <button className={styles.trash}>
+      <button className={styles.trash} onClick={() => onDeleteTask(task.id)}>
         <img src={Trash} alt="icone de deleção" />
       </button>
     </div>
